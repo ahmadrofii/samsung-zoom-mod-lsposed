@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Samsung Cam Zoom Mod</string>
+    <string name="xposed_desc">Smooth zoom easing dan batas zoom maksimum untuk kamera bawaan Samsung (One UI)</string>
+</resources>
