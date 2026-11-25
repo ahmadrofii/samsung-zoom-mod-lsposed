@@ -4,11 +4,13 @@ package com.zoommod.samsungcam;
 final class Cfg {
     static final String PREFS = "settings";
 
+    static final String K_MASTER = "master_on";
     static final String K_MAX_ON = "max_on";
     static final String K_MAX_ZOOM = "max_zoom";      // float, kelipatan (x)
     static final String K_SMOOTH_ON = "smooth_on";
     static final String K_SMOOTH_MS = "smooth_ms";    // int, durasi easing (ms)
 
+    static final boolean DEF_MASTER = true;
     static final boolean DEF_MAX_ON = true;
     static final int DEF_MAX_ZOOM = 100;               // kurva zoom bawaan Samsung sampai 100x
     static final boolean DEF_SMOOTH_ON = true;

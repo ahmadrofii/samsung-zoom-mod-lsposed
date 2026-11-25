@@ -78,6 +78,7 @@ public class MainHook implements IXposedHookLoadPackage {
                     protected void afterHookedMethod(MethodHookParam param) {
                         try {
                             XSharedPreferences p = prefs();
+                            if (!p.getBoolean(Cfg.K_MASTER, Cfg.DEF_MASTER)) return;
                             if (!p.getBoolean(Cfg.K_MAX_ON, Cfg.DEF_MAX_ON)) return;
 
                             String type = String.valueOf(param.args[0]);
@@ -110,6 +111,7 @@ public class MainHook implements IXposedHookLoadPackage {
             protected void beforeHookedMethod(MethodHookParam param) {
                 try {
                     XSharedPreferences p = prefs();
+                    if (!p.getBoolean(Cfg.K_MASTER, Cfg.DEF_MASTER)) return;
                     if (!p.getBoolean(Cfg.K_SMOOTH_ON, Cfg.DEF_SMOOTH_ON)) return;
                     int ms = p.getInt(Cfg.K_SMOOTH_MS, Cfg.DEF_SMOOTH_MS);
                     if (ms < 30) return;
